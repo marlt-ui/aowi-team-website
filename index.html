@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOWI - Accounting Operations & Workflow Innovation | Netflix</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23E50914'/><path d='M30 60 L30 35 L40 35 L40 50 L50 35 L60 35 L60 50 L70 35 L70 60' fill='none' stroke='white' stroke-width='3'/></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <svg class="nav-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#E8171B;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#482280;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="45" fill="url(#logoGradient)"/>
+                    <path d="M25 65 L25 30 M25 65 L40 30 M40 65 L40 30 M40 65 L55 30 M55 65 L55 30 M55 65 L70 30 M70 65 L70 30" 
+                          stroke="white" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#completed" class="nav-link">Completed</a></li>
+                <li><a href="#videos" class="nav-link">Videos</a></li>
+                <li><a href="#newsletters" class="nav-link">Newsletters</a></li>
+                <li><a href="#resources" class="nav-link">Resources</a></li>
+                <li><a href="#stats" class="nav-link">Stats</a></li>
+            </ul>
+            <button class="admin-btn" onclick="app.toggleAdmin()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M12 1v6m0 6v6m5.2-13.2l-3.6 3.6m-3.2 3.2l-3.6 3.6m13.2-5.2l-3.6-3.6m-3.2-3.2l-3.6-3.6"></path>
+                </svg>
+                Admin
+            </button>
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Netflix Internal</div>
+            <h1 class="hero-title">Accounting Operations & Workflow Innovation</h1>
+            <p class="hero-subtitle">Transforming financial operations through innovation and automation</p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="stat-value" id="heroProjectCount">0</div>
+                    <div class="stat-label">Active Projects</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-value" id="heroCompletedCount">0</div>
+                    <div class="stat-label">Completed</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-value" id="heroTeamCount">0</div>
+                    <div class="stat-label">Team Members</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-decoration"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About AOWI</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <svg class="about-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                    <h3>Our Mission</h3>
+                    <p id="missionText">Driving efficiency and innovation in accounting operations through technology and process optimization.</p>
+                </div>
+                <div class="about-card">
+                    <svg class="about-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="9" y1="9" x2="15" y2="15"></line>
+                        <line x1="15" y1="9" x2="9" y2="15"></line>
+                    </svg>
+                    <h3>What We Do</h3>
+                    <p id="whatWeDoText">We streamline financial workflows, implement automation solutions, and create tools that empower Netflix's accounting teams.</p>
+                </div>
+                <div class="about-card">
+                    <svg class="about-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                    <h3>Our Impact</h3>
+                    <p id="impactText">From reducing manual processes to building innovative solutions, we're transforming how Netflix handles accounting operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Team</h2>
+                <div class="search-bar">
+                    <input type="text" id="teamSearch" placeholder="Search team members..." class="search-input">
+                </div>
+            </div>
+            <div id="teamGrid" class="team-grid">
+                <!-- Team members will be rendered here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Current Projects</h2>
+                <div class="filter-group">
+                    <a href="#" id="mondayLink" class="monday-btn" target="_blank" style="display: none;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                        View in Monday.com
+                    </a>
+                    <select id="projectFilter" class="filter-select">
+                        <option value="all">All Projects</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="planning">Planning</option>
+                        <option value="on-hold">On Hold</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                    <input type="text" id="projectSearch" placeholder="Search projects..." class="search-input">
+                </div>
+            </div>
+            <div id="projectsGrid" class="projects-grid">
+                <!-- Projects will be rendered here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Completed Projects Section -->
+    <section id="completed" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Completed Projects</h2>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid" onclick="app.switchView('grid')">Grid</button>
+                    <button class="view-btn" data-view="timeline" onclick="app.switchView('timeline')">Timeline</button>
+                </div>
+            </div>
+            <div id="completedProjects" class="completed-container">
+                <!-- Completed projects will be rendered here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Video Series</h2>
+                <p class="section-subtitle">AI-powered educational content and team resources</p>
+            </div>
+            <div class="video-categories" id="videoCategories">
+                <!-- Video categories will be rendered here -->
+            </div>
+            <div id="videosGrid" class="videos-grid">
+                <!-- Videos will be rendered here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletters Section -->
+    <section id="newsletters" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Team Newsletters</h2>
+                <p class="section-subtitle">Quarterly updates and insights from the AOWI team</p>
+            </div>
+            <div class="newsletter-selector-container">
+                <div class="newsletter-selector-wrapper">
+                    <label for="newsletterSelect" class="newsletter-label">Select a Newsletter:</label>
+                    <select id="newsletterSelect" class="newsletter-select" onchange="app.openSelectedNewsletter()">
+                        <option value="">-- Choose a newsletter --</option>
+                    </select>
+                    <button id="openNewsletterBtn" class="newsletter-open-btn" onclick="app.openSelectedNewsletter()" disabled>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                        Open Newsletter
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Resources & Documentation</h2>
+                <input type="text" id="resourceSearch" placeholder="Search resources..." class="search-input">
+            </div>
+            <div id="resourcesGrid" class="resources-grid">
+                <!-- Resources will be rendered here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Dashboard Section -->
+    <section id="stats" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Team Impact</h2>
+            <div class="stats-dashboard">
+                <div class="stat-card">
+                    <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="20" x2="12" y2="10"></line>
+                        <line x1="18" y1="20" x2="18" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="16"></line>
+                    </svg>
+                    <div class="stat-number" id="totalProjects">0</div>
+                    <div class="stat-label">Total Projects</div>
+                </div>
+                <div class="stat-card">
+                    <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <div class="stat-number" id="completedProjects">0</div>
+                    <div class="stat-label">Completed</div>
+                </div>
+                <div class="stat-card">
+                    <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                    </svg>
+                    <div class="stat-number" id="totalVideos">0</div>
+                    <div class="stat-label">Videos Created</div>
+                </div>
+                <div class="stat-card">
+                    <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                    <div class="stat-number" id="totalResources">0</div>
+                    <div class="stat-label">Resources</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="admin-panel">
+        <div class="admin-content">
+            <div class="admin-header">
+                <h2>Admin Dashboard</h2>
+                <button class="close-btn" onclick="app.toggleAdmin()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="admin-tabs">
+                <button class="admin-tab active" onclick="app.switchAdminTab('team')">Team</button>
+                <button class="admin-tab" onclick="app.switchAdminTab('projects')">Projects</button>
+                <button class="admin-tab" onclick="app.switchAdminTab('completed')">Completed</button>
+                <button class="admin-tab" onclick="app.switchAdminTab('videos')">Videos</button>
+                <button class="admin-tab" onclick="app.switchAdminTab('newsletters')">Newsletters</button>
+                <button class="admin-tab" onclick="app.switchAdminTab('resources')">Resources</button>
+                <button class="admin-tab" onclick="app.switchAdminTab('about')">About</button>
+                <button class="admin-tab" onclick="app.switchAdminTab('settings')">Settings</button>
+            </div>
+            <div id="adminFormContainer" class="admin-form-container">
+                <!-- Admin forms will be rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AOWI Team</h3>
+                    <p>Accounting Operations & Workflow Innovation</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#newsletters">Newsletters</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Netflix Internal Team</p>
+                    <p>Last Updated: <span id="lastUpdated"></span></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Netflix. Internal Use Only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
