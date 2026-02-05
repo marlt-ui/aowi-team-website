@@ -1,0 +1,79 @@
+{
+  "about": {
+    "mission": "Driving efficiency and innovation in accounting operations through technology and process optimization.",
+    "whatWeDo": "We streamline financial workflows, implement automation solutions, and create tools that empower Netflix's accounting teams.",
+    "impact": "From reducing manual processes to building innovative solutions, we're transforming how Netflix handles accounting operations."
+  },
+  "settings": {
+    "mondayUrl": ""
+  },
+  "team": [
+    {
+      "id": 1,
+      "name": "Your Name",
+      "role": "Team Lead",
+      "image": "",
+      "whitePagesUrl": ""
+    }
+  ],
+  "newsletters": [
+    {
+      "id": 1,
+      "title": "Q4'25 Newsletter",
+      "quarter": "Q4'25",
+      "url": "https://example.com/newsletter-q4-25"
+    },
+    {
+      "id": 2,
+      "title": "Q2'25 Newsletter",
+      "quarter": "Q2'25",
+      "url": "https://example.com/newsletter-q2-25"
+    },
+    {
+      "id": 3,
+      "title": "Q1'25 Newsletter",
+      "quarter": "Q1'25",
+      "url": "https://example.com/newsletter-q1-25"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Workflow Automation System",
+      "description": "Building automated workflows to reduce manual data entry and improve accuracy.",
+      "status": "in-progress",
+      "progress": 65,
+      "owner": "Team Member",
+      "startDate": "2026-01-15",
+      "targetEndDate": "2026-06-30"
+    }
+  ],
+  "completed": [
+    {
+      "id": 1,
+      "title": "Invoice Processing Tool",
+      "description": "Automated invoice processing system that reduced processing time by 70%.",
+      "impact": "Saved 20+ hours per week across the accounting team.",
+      "completedDate": "2025-12-15"
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "title": "Introduction to AOWI Tools",
+      "description": "Overview of our team's tools and how to use them effectively.",
+      "category": "Tutorial",
+      "url": "https://example.com/video1",
+      "duration": "5:30"
+    }
+  ],
+  "resources": [
+    {
+      "id": 1,
+      "title": "Team Handbook",
+      "description": "Complete guide to AOWI processes and best practices.",
+      "type": "Google Doc",
+      "url": "https://docs.google.com"
+    }
+  ]
+}
